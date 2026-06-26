@@ -624,7 +624,7 @@
                 console.warn('Geolocation failed, using default coordinates.', err);
                 useLocation(DEFAULT_LAT, DEFAULT_LNG);
             },
-            { enableHighAccuracy: true, timeout: 20000 }
+            { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 }
         );
     } else {
         useLocation(DEFAULT_LAT, DEFAULT_LNG);
